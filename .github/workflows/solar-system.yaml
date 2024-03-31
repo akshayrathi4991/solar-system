@@ -9,6 +9,10 @@ on:
     
 jobs:
     unit-testing:
+        env:
+            MONGO_URI: 'mongodb+srv://supercluster.d83jj.mongodb.net/mydatabase'
+            MONGO_USERNAME: 'superuser'
+            MONGO_PASSWORD: 'superpassword'
         name: Unit Testing
         runs-on: ubuntu-latest
         steps:
@@ -25,4 +29,3 @@ jobs:
     
         - name: Unit Testing
           run: npm test
-          
